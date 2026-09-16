@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>隐私政策 · 「订单监控」（Microsoft Edge 扩展）</title>
+<meta name="description" content="Microsoft Edge 浏览器扩展「订单监控」的隐私政策：说明该扩展访问哪些数据、如何使用、存放在哪里，以及用户可用的控制方式。">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131315" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b45309'/%3E%3Cpath d='M8 20h16M8 12h10' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1c1c1e; --muted:#6b6b70; --line:#e6e6ea;
+  --accent:#b45309; --link:#8a4b0a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131315; --fg:#f0f0f2; --muted:#9a9aa1; --line:#2d2d33;
+    --accent:#f0a44a; --link:#f0a44a;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:15px/1.78 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-feature-settings:"kern" 1;
+}
+.wrap{max-width:720px; margin:0 auto; padding:56px 24px 80px}
+.eyebrow{margin:0 0 12px; font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+h1{margin:0 0 14px; font-size:26px; line-height:1.35; font-weight:600; letter-spacing:-.01em}
+.meta{margin:0 0 30px; font-size:13px; color:var(--muted)}
+.lead{margin:0 0 34px; padding-bottom:30px; border-bottom:1px solid var(--line); font-size:16px; line-height:1.8}
+h2{margin:38px 0 12px; font-size:17px; font-weight:600; line-height:1.5}
+h2:first-of-type{margin-top:30px}
+p{margin:0 0 14px}
+ul{margin:0 0 16px; padding-left:1.4em}
+li{margin:0 0 7px}
+strong{font-weight:600}
+a{color:var(--link); text-underline-offset:2px}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.9em; padding:1px 5px; border-radius:4px;
+  background:color-mix(in srgb, var(--fg) 7%, transparent);
+}
+.split{margin:66px 0 0; border:0; border-top:1px solid var(--line)}
+.en h2{margin:30px 0 10px; font-size:16px}
+.en p, .en ul{font-size:14px; line-height:1.72}
+.en .meta{margin-bottom:26px}
+.sub{margin:0 0 18px; font-size:13px; color:var(--muted)}
+footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--line); font-size:13px; line-height:1.7; color:var(--muted)}
+@media (max-width:560px){
+  .wrap{padding:38px 20px 64px}
+  h1{font-size:22px}
+  .lead{font-size:15px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <p class="eyebrow">Microsoft Edge 扩展</p>
+  <h1>「订单监控」隐私政策</h1>
+  <p class="meta">适用版本 1.0.0　·　生效日期 2026 年 9 月 16 日　·　最后更新 2026 年 9 月 16 日</p>
+
+  <p class="lead">本政策说明浏览器扩展「订单监控」（下称“本扩展”）如何处理数据。本政策仅针对本扩展在 <strong>Microsoft Edge</strong> 浏览器中的使用。</p>
+
+  <h2>一、本扩展不向开发者传输任何数据</h2>
+  <p>本扩展没有开发者运营的服务器，不包含广告、统计、分析、崩溃上报或任何形式的遥测代码。开发者不会收到、存储或接触你的任何数据。</p>
+
+  <h2>二、本扩展会访问哪些数据</h2>
+  <p>为完成其唯一用途——在你已登录的科研测试服务网站上汇总展示待处理订单、并生成订单详情截图——本扩展会在该网站的订单相关页面上读取以下内容：</p>
+  <ul>
+    <li><strong>订单信息</strong>：订单号、项目名称、区域、对接人、样品数、日期与备注；</li>
+    <li><strong>订单页面的可见内容</strong>：订单详情文本、实验数据与样品要求区块、样品表格、页面中的图片，以及页面上的附件下载链接。</li>
+  </ul>
+  <p>这些数据仅在你的浏览器中用于渲染本扩展的界面、生成截图与保存附件，<strong>不会发送给开发者或任何第三方</strong>。</p>
+
+  <h2>三、数据存放在哪里、保留多久</h2>
+  <p>你的设置与少量运行状态（轮询间隔、可复制字段的配置、备注快捷文案、监控开关状态、当天已处理的订单编号、当前轮询的标签页编号、配置版本号）保存在浏览器本地的扩展存储（<code>chrome.storage.local</code>）中，仅存于你的设备，不参与任何云端同步。</p>
+  <p>卸载本扩展即随之删除。你也可以随时在 Microsoft Edge 中清除本扩展的数据来删除这些内容。</p>
+
+  <h2>四、数据如何离开你的设备</h2>
+  <p>唯一会让数据离开你设备的操作是：当你在订单列表中主动点击「录」或「派」时，本扩展会把该订单的<strong>订单号</strong>和你<strong>填写的备注文本</strong>写入你已登录的该网站自身接口，效果等同于你在该网站上手动提交一次备注。该数据写入的是你自己的账号，接收方是你在使用的那项服务，而不是开发者。</p>
+  <p>除此之外，本扩展不会向任何服务器发送数据。</p>
+
+  <h2>五、你的控制方式</h2>
+  <ul>
+    <li>在扩展弹窗中关闭「订单监控」开关，即立即停止订单轮询，并停止发送系统通知；</li>
+    <li>关闭或卸载本扩展；</li>
+    <li>在 Microsoft Edge 的扩展管理页取消本扩展的通知权限；</li>
+    <li>在扩展设置中修改轮询间隔、自定义可复制字段，或清空备注快捷文案。</li>
+  </ul>
+
+  <h2>六、我们不做的事</h2>
+  <p>本扩展不采集你的浏览历史，不记录你的点击、鼠标移动、滚动或键盘输入，不建立用户画像，不进行广告投放，不向任何第三方出售、出租或共享数据，也不将数据用于判断信用或借贷目的。本扩展不含任何远程加载或执行的代码。</p>
+
+  <h2>七、第三方</h2>
+  <p>本扩展不集成任何第三方分析、广告或数据 SDK。本扩展发起的网络请求只有一类：向你正在使用的那项科研测试服务网站自身的接口发起请求，用于拉取订单列表与提交备注。</p>
+
+  <h2>八、儿童</h2>
+  <p>本扩展面向专业人员的工作场景，不面向儿童，也不会主动收集儿童的任何信息。</p>
+
+  <h2>九、政策变更</h2>
+  <p>本政策如有变更，将在本页面更新并标注生效日期。若变更涉及数据范围的扩大，我们会通过扩展的更新说明一并告知。</p>
+
+  <h2>十、联系方式</h2>
+  <p>如对本政策有疑问，或需要查询、删除与本扩展相关的数据，请联系：<a href="mailto:kontar_wk@163.com">kontar_wk@163.com</a></p>
+
+  <hr class="split">
+
+  <section class="en" lang="en">
+    <h2>Privacy Policy — “Order Monitor” extension for Microsoft Edge</h2>
+    <p class="meta">Applies to version 1.0.0　·　Effective 16 September 2026　·　Last updated 16 September 2026</p>
+    <p class="sub">This policy describes how the browser extension “Order Monitor” (the “extension”) handles data. It covers the use of this extension in the <strong>Microsoft Edge</strong> browser only.</p>
+
+    <h2>1. No data is transmitted to the developer</h2>
+    <p>The extension has no developer-operated server. It contains no advertising, statistics, analytics, crash-reporting or telemetry code of any kind. The developer never receives, stores or has access to any of your data.</p>
+
+    <h2>2. What data the extension accesses</h2>
+    <p>To fulfil its single purpose — summarizing pending orders on a research testing service website you are signed in to, and producing a screenshot of an order’s details — the extension reads the following on that website’s own order pages:</p>
+    <ul>
+      <li><strong>Order information</strong>: order number, project name, region, contact person, sample count, date and remark;</li>
+      <li><strong>Visible page content</strong>: order detail text, the experiment-data and sample-requirement sections, sample tables, images on the page, and attachment download links shown on the page.</li>
+    </ul>
+    <p>This data is used only inside your browser, to render the extension’s interface, produce screenshots and save attachments. It is <strong>never sent to the developer or to any third party</strong>.</p>
+
+    <h2>3. Where data is stored and for how long</h2>
+    <p>Your settings and a small amount of runtime state (polling interval, configuration of copyable fields, remark quick-text, the on/off state of the monitoring switch, order numbers processed today, the id of the tab currently being polled, and a configuration schema version) are kept in the browser’s local extension storage (<code>chrome.storage.local</code>), on your device only. Nothing is synced to any cloud service.</p>
+    <p>Uninstalling the extension deletes this data. You can also delete it at any time by clearing the extension’s data in Microsoft Edge.</p>
+
+    <h2>4. How data can leave your device</h2>
+    <p>The only action that sends data off your device is when you yourself click the “record” or “dispatch” button on an order: the extension then writes that order’s <strong>order number</strong> and the <strong>remark text you typed</strong> to the website’s own API, exactly as if you had submitted a remark manually on that website. The data is written to your own account on the service you are using — not to the developer.</p>
+    <p>Apart from that, the extension sends no data to any server.</p>
+
+    <h2>5. Your controls</h2>
+    <ul>
+      <li>Turn the “Order monitoring” switch off in the extension popup — polling stops immediately and no further notifications are shown;</li>
+      <li>Disable or uninstall the extension;</li>
+      <li>Revoke the extension’s notification permission in Microsoft Edge’s extension settings;</li>
+      <li>Change the polling interval, customize the copyable fields, or clear the remark quick-text in the extension settings.</li>
+    </ul>
+
+    <h2>6. What we do not do</h2>
+    <p>The extension does not collect your browsing history, does not log your clicks, mouse movement, scrolling or keystrokes, does not build user profiles, does not serve advertising, does not sell, rent or share data with any third party, and does not use data to determine creditworthiness or for lending purposes. The extension contains no remotely loaded or remotely executed code.</p>
+
+    <h2>7. Third parties</h2>
+    <p>The extension integrates no third-party analytics, advertising or data SDKs. It makes only one kind of network request: to the API of the research testing service website you are using, in order to fetch the order list and submit a remark.</p>
+
+    <h2>8. Children</h2>
+    <p>The extension is intended for professional use in a workplace. It is not directed at children and does not knowingly collect any information from children.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published on this page with a new effective date. If a change broadens the scope of data handled, it will also be noted in the extension’s release notes.</p>
+
+    <h2>10. Contact</h2>
+    <p>For questions about this policy, or to request access to or deletion of data related to this extension, contact: <a href="mailto:kontar_wk@163.com">kontar_wk@163.com</a></p>
+  </section>
+
+  <footer>
+    <p>本页面为 Microsoft Edge 扩展「订单监控」的隐私政策，无 Cookie、无脚本、无第三方资源，不收集访问统计。</p>
+    <p>This page is the privacy policy for the “Order Monitor” extension for Microsoft Edge. It sets no cookies, runs no scripts and loads no third-party resources.</p>
+  </footer>
+
+</main>
+</body>
+</html>
