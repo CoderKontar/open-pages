@@ -1,0 +1,7 @@
+# macOS
+.DS_Store
+._*
+
+# 录屏原始素材（只提交转码后的成品 video/video.mp4）
+*.mov
+raw/

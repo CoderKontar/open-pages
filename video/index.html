@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walkthrough Video · Order Monitor (Microsoft Edge extension)</title>
+<meta name="description" content="Recorded walkthrough of the Microsoft Edge extension Order Monitor — no sign-in required to watch.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#131315" media="(prefers-color-scheme: dark)">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23b45309'/%3E%3Cpath d='M8 20h16M8 12h10' stroke='%23fff' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#ffffff; --fg:#1c1c1e; --muted:#6b6b70; --line:#e6e6ea;
+  --accent:#b45309; --link:#8a4b0a;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#131315; --fg:#f0f0f2; --muted:#9a9aa1; --line:#2d2d33;
+    --accent:#f0a44a; --link:#f0a44a;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font:15px/1.78 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-feature-settings:"kern" 1;
+}
+.wrap{max-width:880px; margin:0 auto; padding:56px 24px 80px}
+.eyebrow{margin:0 0 12px; font-size:12px; font-weight:600; letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+h1{margin:0 0 14px; font-size:26px; line-height:1.35; font-weight:600; letter-spacing:-.01em}
+.meta{margin:0 0 30px; font-size:13px; color:var(--muted)}
+.lead{margin:0 0 28px; padding-bottom:28px; border-bottom:1px solid var(--line); font-size:16px; line-height:1.8}
+h2{margin:38px 0 12px; font-size:17px; font-weight:600; line-height:1.5}
+h2:first-of-type{margin-top:30px}
+p{margin:0 0 14px}
+ul{margin:0 0 16px; padding-left:1.4em}
+li{margin:0 0 7px}
+strong{font-weight:600}
+a{color:var(--link); text-underline-offset:2px}
+code{
+  font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:.9em; padding:1px 5px; border-radius:4px;
+  background:color-mix(in srgb, var(--fg) 7%, transparent);
+}
+.player{
+  margin:0 0 26px; border:1px solid var(--line); border-radius:10px;
+  overflow:hidden; background:#000;
+}
+/* 不加 aspect-ratio：源片是 1728×1080（1.6:1），写死 16/9 会让播放器左右留黑边。
+   交给 height:auto 用视频自身比例撑开即可。 */
+.player video{display:block; width:100%; height:auto; background:#000}
+.chapters{list-style:none; margin:0 0 18px; padding:0; border-top:1px solid var(--line)}
+.chapters li{margin:0; border-bottom:1px solid var(--line)}
+.chapters button{
+  display:flex; gap:14px; width:100%; padding:10px 2px;
+  background:none; border:0; cursor:pointer; text-align:left;
+  font:inherit; font-size:14px; color:var(--fg);
+}
+.chapters button:hover .t{color:var(--accent)}
+.chapters .t{
+  flex:0 0 52px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  font-size:13px; color:var(--muted); padding-top:1px;
+}
+.split{margin:66px 0 0; border:0; border-top:1px solid var(--line)}
+.sub{margin:0 0 18px; font-size:13px; color:var(--muted)}
+footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--line); font-size:13px; line-height:1.7; color:var(--muted)}
+@media (max-width:560px){
+  .wrap{padding:38px 20px 64px}
+  h1{font-size:22px}
+  .lead{font-size:15px}
+  .chapters button{font-size:13px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+  <p class="eyebrow">Microsoft Edge extension</p>
+  <h1>Order Monitor — recorded walkthrough</h1>
+  <p class="meta">Tested version 1.0.1　·　Recorded 2026-09-26　·　<strong>No sign-in required to watch</strong></p>
+
+  <p class="lead">This page hosts a screen recording of the <strong>Order Monitor</strong> extension (订单监控) performing its normal workflow, together with the parts of the extension that can be verified <strong>without any account</strong>.</p>
+
+  <div class="player">
+    <video id="v" controls preload="metadata" playsinline>
+      <source src="video.mp4" type="video/mp4">
+      Your browser cannot play this video inline. Download it directly: <a href="video.mp4">video.mp4</a>.
+    </video>
+  </div>
+
+  <h2>Chapters</h2>
+  <ul class="chapters" id="chapters">
+    <li><button type="button" data-t="0"><span class="t">0:00</span><span>Install the extension — the Edge extensions page.</span></button></li>
+    <li><button type="button" data-t="9"><span class="t">0:09</span><span>The browser's extension panel; "订单监控" is pinned to the toolbar.</span></button></li>
+    <li><button type="button" data-t="13"><span class="t">0:13</span><span>Open the extension popup: monitoring is currently <em>paused</em>, poll interval 30 minutes, remark templates not configured.</span></button></li>
+    <li><button type="button" data-t="18"><span class="t">0:18</span><span>Open the host order page from the popup while signed out → the "请先登录" pill appears in the bottom-right corner. <strong>No account needed for this step.</strong></span></button></li>
+    <li><button type="button" data-t="29"><span class="t">0:29</span><span>Turn monitoring on from the popup — the floating ball appears on the host page.</span></button></li>
+    <li><button type="button" data-t="39"><span class="t">0:39</span><span>Expand the floating panel: the 待分派订单 / 今日分派订单 tabs and the order table.</span></button></li>
+    <li><button type="button" data-t="46"><span class="t">0:46</span><span>Open the settings drawer — staff mapping (analysis type → handler).</span></button></li>
+    <li><button type="button" data-t="52"><span class="t">0:52</span><span>Copy-field configuration.</span></button></li>
+    <li><button type="button" data-t="56"><span class="t">0:56</span><span>Drag to reorder the table columns.</span></button></li>
+    <li><button type="button" data-t="62"><span class="t">1:02</span><span>Close the drawer, back to the order panel.</span></button></li>
+    <li><button type="button" data-t="68"><span class="t">1:08</span><span>Popup again: monitoring now reads 运行中 (active).</span></button></li>
+  </ul>
+  <p class="sub">Click any chapter to jump to that moment. Times are approximate.</p>
+
+  <p class="sub">Customer names, phone numbers and delivery addresses are redacted throughout the recording.</p>
+
+  <h2>What you can verify yourself, without an account</h2>
+  <p>The extension depends on a third-party supplier portal and has no interface of its own. Two things nevertheless require no credentials at all:</p>
+  <ul>
+    <li><strong>The extension popup.</strong> Install the extension and click its toolbar icon. The complete control surface renders: the 订单监控 title, the 启用监控 (enable monitoring) switch, the poll interval, and the 录入备注 / 派单备注 remark-template fields.</li>
+    <li><strong>Content script injection.</strong> Open <code>https://s.shiyanjia.com/</code> while signed out. The portal redirects to its sign-in page, and a small dark rounded pill reading <strong>请先登录</strong> appears in the bottom-right corner. That pill is rendered by this extension — it demonstrates that the content script is injected, that the match pattern matches, that the framework mounts, and that the signed-out state is detected correctly.</li>
+  </ul>
+
+  <h2>About this recording — two things it does not show</h2>
+  <p>Both are configuration states, not malfunctions. Worth knowing before you watch:</p>
+  <ul>
+    <li><strong>No per-row 「录 / 派」 buttons in the order table.</strong> By design the extension renders those buttons only after <em>both</em> remark templates — 录入备注 and 派单备注 — have been filled in. In this recording both are left empty (visible at 0:13), and the popup states that rule in its own text. The screen where the templates are configured is shown from 0:46.</li>
+    <li><strong>The one-click field copy is not performed on a real order.</strong> The demo account has no pending orders at all — both tabs read <em>No data</em> — so there was no row to copy from. What the recording does show is the copy-field configuration (0:52) and the resulting column order (0:56). One-click copy merely writes the selected order fields to the local clipboard; it makes no network request and sends nothing anywhere.</li>
+  </ul>
+
+  <h2>Companion pages</h2>
+  <ul>
+    <li><a href="../">Privacy policy</a> — what data the extension touches, where it is stored, and how it is controlled.</li>
+  </ul>
+
+  <hr class="split">
+
+  <h2>「订单监控」功能演示录像（中文）</h2>
+  <p class="meta">测试版本 1.0.1　·　录制于 2026-09-26　·　时长 1 分 14 秒　·　<strong>无需登录即可观看</strong></p>
+  <p>本页托管「订单监控」扩展的完整操作录像，并列出<strong>无需任何账号</strong>即可自行验证的部分。分段时间码见上方 Chapters 列表，点击任意一条可直接跳转。</p>
+
+  <h2>无需账号即可验证的两项</h2>
+  <ul>
+    <li><strong>扩展弹窗。</strong>安装扩展后点击工具栏图标，即可看到完整控制面板：「订单监控」标题、「启用监控」开关、轮询间隔、「录入备注」与「派单备注」。</li>
+    <li><strong>内容脚本注入。</strong>在未登录状态下打开 <code>https://s.shiyanjia.com/</code>，页面会跳转到登录页，右下角出现一个写着「<strong>请先登录</strong>」的深色胶囊。该胶囊由本扩展渲染，可证明内容脚本已注入、匹配规则命中、框架挂载成功，且未登录状态被正确识别。</li>
+  </ul>
+  <h2>关于本录像：两处刻意未展示的内容</h2>
+  <p>两者都是<strong>配置状态</strong>，不是功能故障。观看前先了解一下：</p>
+  <ul>
+    <li><strong>订单列表里没有出现「录 / 派」按钮。</strong>按扩展设计，「录入备注」与「派单备注」<em>两条都</em>配置好之后，这两个按钮才会渲染。本录像中两条均为空（见 0:13），扩展弹窗内也写明了这条规则。配置它们的位置见 0:46。</li>
+    <li><strong>未在真实订单上执行「一键复制」。</strong>演示账号的待分派列表为空（两个标签页都显示 <em>No data</em>），没有可复制的行。录像展示的是复制字段的配置界面（0:52）以及由此产生的列顺序（0:56）。一键复制只是把所选订单字段写入本地剪贴板，不发起任何网络请求，也不会把数据发往任何地方。</li>
+  </ul>
+
+  <p>录像中订单行的客户姓名、手机号与收货地址均已做模糊处理。</p>
+
+  <h2>相关页面</h2>
+  <ul>
+    <li><a href="../">隐私政策</a>——说明本扩展访问哪些数据、存放在哪里，以及用户可用的控制方式。</li>
+  </ul>
+
+  <footer>
+    <p>This recording is provided as alternative evidence for the Microsoft Edge Add-ons certification review. Partner Center: Submission options → Notes for certification.</p>
+    <p>本录像用于 Microsoft Edge 加载项认证审核的补充证明材料。</p>
+  </footer>
+
+</main>
+<script>
+// 章节跳转。不引入任何外部依赖；data-t 单位是秒。
+// 用 closest 是因为点击目标可能是按钮里的 <span>。
+(function () {
+  var v = document.getElementById('v');
+  var list = document.getElementById('chapters');
+  if (!v || !list) return;
+  list.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('button[data-t]');
+    if (!btn) return;
+    v.currentTime = Number(btn.getAttribute('data-t')) || 0;
+    v.play();
+    v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+</body>
+</html>
